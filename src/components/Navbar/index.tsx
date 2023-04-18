@@ -84,7 +84,7 @@ const Navbar = (props: any) => {
             Contact Me
           </LinkItem>
         </Stack>
-        <Box flex={1} alignItems={'right'} pr={4}>
+        <Box alignItems={'right'} pr={4}>
           <ThemeToggleBtn />
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu>
