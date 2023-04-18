@@ -21,8 +21,6 @@ import Layout from '../src/components/layouts/article'
 import VoxelModel from '../src/components/Model'
 import NoSsr from './../src/components/no-ssr'
 
-import { motion } from 'framer-motion'
-
 //Icons
 import { TbSql, TbBrandCSharp } from 'react-icons/tb'
 import { IoLogoReact } from 'react-icons/io5'

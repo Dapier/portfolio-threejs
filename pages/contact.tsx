@@ -34,7 +34,6 @@ const Contact = () => {
   const [state, setState] = useState(initState)
   const [touched, setTouched] = useState({})
   const toast = useToast()
-  const statuses = ['success', 'error', 'warning', 'info']
 
   const { values, isLoading, error } = state
 
