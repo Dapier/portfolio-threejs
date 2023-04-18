@@ -1,0 +1,37 @@
+{
+  "name": "threejs-portfolio",
+  "version": "1.0.0",
+  "description": "Dapier's website portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "prettier": "prettier -write .",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.17",
+    "@chakra-ui/react": "^2.5.3",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "framer-motion": "^10.9.1",
+    "next": "^13.2.4",
+    "nodemailer": "^6.9.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "three": "^0.151.3"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.8",
+    "@types/react": "^18.0.29",
+    "eslint": "^8.36.0",
+    "eslint-config-next": "^13.2.4",
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.2"
+  }
+}
