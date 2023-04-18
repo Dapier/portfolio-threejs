@@ -1,15 +1,18 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
+
 import { Box, Spinner } from '@chakra-ui/react'
+// @ts-ignore
 import * as THREE from 'three'
+// @ts-ignore
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from '../../../libs/model'
 
-function easeOutCirc(x) {
+function easeOutCirc(x: any) {
   return Math.sqrt(1 - Math.pow(x - 1, 4))
 }
 
 const VoxelModel = () => {
-  const refContainer = useRef()
+  const refContainer = useRef<HTMLDivElement>(null)
   const [loading, setLoading] = useState(true)
   const [renderer, setRenderer] = useState()
   const [_camera, setCamera] = useState()
@@ -28,18 +31,23 @@ const VoxelModel = () => {
   const handleWindowResize = useCallback(() => {
     const { current: container } = refContainer
     if (container && renderer) {
+      // @ts-ignore\
       const scW = container.clientWidth
+      // @ts-ignore
       const scH = container.clientHeight
+      // @ts-ignore
       renderer.setSize(scW, scH)
     }
-  }, [])
+  }, [renderer])
 
   /* eslint-disable react-hooks/exhaustive-deps */
 
   useEffect(() => {
     const { current: container } = refContainer
     if (container && !renderer) {
+      // @ts-ignore
       const scW = container.clientWidth
+      // @ts-ignore
       const scH = container.clientHeight
 
       const renderer = new THREE.WebGLRenderer({
@@ -49,6 +57,7 @@ const VoxelModel = () => {
       renderer.setPixelRatio(window.devicePixelRatio)
       renderer.setSize(scW, scH)
       renderer.outputEncoding = THREE.sRGBEncoding
+      // @ts-ignore
       container.appendChild(renderer.domElement)
 
       setRenderer(renderer)
@@ -83,6 +92,7 @@ const VoxelModel = () => {
         setLoading(false)
       })
 
+      // @ts-ignore
       let req = null
       let frame = 0
       const animate = () => {
@@ -107,6 +117,7 @@ const VoxelModel = () => {
       }
 
       return () => {
+        // @ts-ignore
         cancelAnimationFrame(req)
         renderer.domElement.remove()
         renderer.dispose()
@@ -122,6 +133,8 @@ const VoxelModel = () => {
   }, [renderer, handleWindowResize])
 
   return (
+    // @ts-ignore
+
     <Box
       ref={refContainer}
       className="voxel-model"

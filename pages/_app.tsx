@@ -4,8 +4,9 @@ import theme from '../libs/theme'
 import Fonts from '../src/components/fonts.js'
 import { AnimatePresence } from 'framer-motion'
 import { motion } from 'framer-motion'
+import { AppProps } from 'next/app'
 
-const App = ({ Component, pageProps, router }: any) => {
+const App = ({ Component, pageProps, router }: AppProps) => {
   return (
     <ChakraProvider theme={theme}>
       <Fonts />

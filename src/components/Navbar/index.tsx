@@ -36,7 +36,7 @@ const LinkItem = ({ href, path, children, ...props }: any) => {
   )
 }
 
-const Navbar = props => {
+const Navbar = (props: any) => {
   const { path } = props
 
   return (
@@ -58,7 +58,7 @@ const Navbar = props => {
         justifyContent="center"
         alignItems="center"
       >
-        <Flex align="center" mr={5} flex={1}>
+        <Flex alignItems="center" mr={5} flex={1}>
           <Heading as="h1" size="lg">
             <Logo />
           </Heading>
@@ -84,7 +84,7 @@ const Navbar = props => {
             Contact Me
           </LinkItem>
         </Stack>
-        <Box flex={1} align={'right'} pr={4}>
+        <Box flex={1} alignItems={'right'} pr={4}>
           <ThemeToggleBtn />
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu>

@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from 'next/dist/client/link'
 import {
   Box,
   Text,
@@ -7,6 +7,7 @@ import {
   Divider,
   Button
 } from '@chakra-ui/react'
+// @ts-ignore
 import { motion } from 'framer-motion'
 import NotFoundModel from '../src/components/NotFoundModel'
 import NoSsr from './../src/components/no-ssr'
@@ -15,7 +16,7 @@ const NotFound = () => {
   return (
     <Container
       maxW={'1200px'}
-      height={'100vh'}
+      height={'85vh'}
       display={'flex'}
       flexDirection={'column'}
       justifyContent="center"
@@ -33,7 +34,7 @@ const NotFound = () => {
       <Heading as="h1"> Error 404 - Page Not Found :(</Heading>
       <Text>Wow!, it seems like this site doesn&apos;t exist.</Text>
       <Divider my={6} />
-      <Box my={6} alignContent={'center'} align={'center'}>
+      <Box my={6} alignContent={'center'}>
         <Link href="/" passHref legacyBehavior>
           <Button colorScheme="cyan">Back to Home</Button>
         </Link>

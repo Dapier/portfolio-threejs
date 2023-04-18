@@ -1,15 +1,17 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { Box, Spinner } from '@chakra-ui/react'
+// @ts-ignore
 import * as THREE from 'three'
+// @ts-ignore
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from '../../../libs/model'
 
-function easeOutCirc(x) {
+function easeOutCirc(x: any) {
   return Math.sqrt(1 - Math.pow(x - 1, 4))
 }
 
 const NotFoundModel = () => {
-  const refContainer = useRef()
+  const refContainer = useRef<HTMLDivElement>(null)
   const [loading, setLoading] = useState(true)
   const [renderer, setRenderer] = useState()
   const [_camera, setCamera] = useState()
@@ -30,9 +32,10 @@ const NotFoundModel = () => {
     if (container && renderer) {
       const scW = container.clientWidth
       const scH = container.clientHeight
+      // @ts-ignore
       renderer.setSize(scW, scH)
     }
-  }, [])
+  }, [renderer])
 
   /* eslint-disable react-hooks/exhaustive-deps */
 
@@ -82,6 +85,7 @@ const NotFoundModel = () => {
         animate()
         setLoading(false)
       })
+      // @ts-ignore
 
       let req = null
       let frame = 0
@@ -107,6 +111,8 @@ const NotFoundModel = () => {
       }
 
       return () => {
+        // @ts-ignore
+
         cancelAnimationFrame(req)
         renderer.domElement.remove()
         renderer.dispose()

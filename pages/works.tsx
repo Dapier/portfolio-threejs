@@ -1,10 +1,10 @@
-import { Container, Heading, SimpleGrid, Tag } from '@chakra-ui/react'
+import { Container, HStack, Heading, SimpleGrid, Tag } from '@chakra-ui/react'
 import { WorkGridItem } from '../src/components/common/grid-items'
 import Section from '../src/components/Section'
 import Layout from '../src/components/layouts/article'
 // Projects SS
 
-import pocketClinic from '../public/images/pocketclinic.jpeg'
+import pocketClinic from './../public/images/pocketclinic.jpeg'
 import spotme from '../public/images/spotme.jpg'
 import kaanbalcatBlog from '../public/images/blog.jpg'
 import pharmacyEcommerce from '../public/images/ecommerce.png'
@@ -24,14 +24,23 @@ const Works = () => {
               title={'SpotMe Mx'}
               thumbnail={spotme}
             >
-              <Tag variant={'outline'} colorScheme="teal">
-                ReactJs
-              </Tag>
-              <Tag>GraphQL</Tag>
-              <Tag>AWS</Tag>
-              <Tag>styled-components</Tag>
-              <Tag>NextJS</Tag>
-              <br />
+              <HStack spacing={3} my={2}>
+                <Tag variant={'outline'} colorScheme="teal">
+                  ReactJs
+                </Tag>
+                <Tag variant={'outline'} color={'blue.200'}>
+                  GraphQL
+                </Tag>
+                <Tag variant={'outline'} colorScheme="yellow">
+                  AWS
+                </Tag>
+                <Tag variant={'outline'} color="purple.400">
+                  styled-components
+                </Tag>
+                <Tag variant={'outline'} color="blue.400">
+                  NextJS
+                </Tag>
+              </HStack>
               Web application where you can rent out your storage spaces.
               Collaborated as a Junior Front-end Developer in the implementation
               of new reusable components, improvements to UI/UX, and
@@ -46,12 +55,17 @@ const Works = () => {
               title={'Blog'}
               thumbnail={kaanbalcatBlog}
             >
-              <Tag variant={'outline'} colorScheme="teal">
-                NextJs
-              </Tag>
-              <Tag>GraphQL</Tag>
-              <Tag>Tailwind CSS</Tag>
-              <br />
+              <HStack spacing={3} my={2}>
+                <Tag variant={'outline'} color="blue.400">
+                  NextJS
+                </Tag>
+                <Tag variant={'outline'} color={'blue.200'}>
+                  GraphQL
+                </Tag>
+                <Tag variant={'outline'} colorScheme="teal">
+                  TailwindCSS
+                </Tag>
+              </HStack>
               Blog with a CMS system using the Hygraph API, where I write
               articles related to web development.
             </WorkGridItem>
@@ -63,13 +77,23 @@ const Works = () => {
               title={'Pharmacy Ecommerce'}
               thumbnail={pharmacyEcommerce}
             >
-              <Tag variant={'outline'} colorScheme="teal">
-                ReactJS
-              </Tag>
-              <Tag>Stripe</Tag>
-              <Tag>Materialize </Tag>
-              <Tag>Firebase </Tag>
-              <br />
+              <HStack spacing={3} my={2}>
+                <Tag variant={'outline'} colorScheme="teal">
+                  ReactJS
+                </Tag>
+                <Tag variant={'outline'} color="purple.400">
+                  Stripe
+                </Tag>
+                <Tag variant={'outline'} color="purple.600">
+                  Stripe
+                </Tag>
+                <Tag variant={'outline'} color="blue.200">
+                  Materialize
+                </Tag>
+                <Tag variant={'outline'} color="yellow.200">
+                  Firebase
+                </Tag>
+              </HStack>
               E-commerce pharmacy with functional payment system, CRUD (Create,
               Read, Update, Delete) for products, authentication, and shopping
               cart.
@@ -82,11 +106,14 @@ const Works = () => {
               title={'Clinic App - Kotilin'}
               thumbnail={pocketClinic}
             >
-              <Tag variant={'outline'} colorScheme="teal">
-                Kotlin
-              </Tag>
-              <Tag>Firebase</Tag>
-              <br />
+              <HStack spacing={3} my={2}>
+                <Tag variant={'outline'} colorScheme="teal">
+                  Kotlin
+                </Tag>
+                <Tag variant={'outline'} color="yellow.200">
+                  Firebase
+                </Tag>
+              </HStack>
               Application developed as a final project for university with a
               messaging and reservation system to streamline the appointment
               process of a clinic.
@@ -99,11 +126,14 @@ const Works = () => {
               title={'Website Minimalist'}
               thumbnail={website}
             >
-              <Tag variant={'outline'} colorScheme="teal">
-                ReactJS
-              </Tag>
-              <Tag>styled-components</Tag>
-              <br />
+              <HStack spacing={3} my={2}>
+                <Tag variant={'outline'} colorScheme="teal">
+                  ReactJS
+                </Tag>
+                <Tag variant={'outline'} color="purple.400">
+                  styled-components
+                </Tag>
+              </HStack>
               Minimalistic landing page-style website.
             </WorkGridItem>
           </Section>

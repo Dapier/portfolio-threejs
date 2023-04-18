@@ -15,30 +15,23 @@ import {
   useToast
 } from '@chakra-ui/react'
 import { Icon } from '@chakra-ui/react'
+// @ts-ignore
+
 import { SiLinkedin } from 'react-icons/si'
 import Link from 'next/link'
 import { useState } from 'react'
 import { sendContactForm } from '../libs/api'
-import { error } from 'console'
 
-const initValues = {
-  company: '',
-  email: '',
-  subject: '',
-  message: ''
-}
+const initValues = { company: '', email: '', subject: '', message: '' }
 
-const initState = { values: initValues }
+const initState = { isLoading: false, error: '', values: initValues }
 
 const Contact = () => {
   const [state, setState] = useState(initState)
-  const [touched, setTouched] = useState({})
+  // const [touched, setTouched] = useState({})
   const toast = useToast()
 
   const { values, isLoading, error } = state
-
-  const onBlur = ({ target }) =>
-    setTouched(prev => ({ ...prev, [target.name]: true }))
 
   const handleChange = ({ target }: any) =>
     setState(prev => ({
@@ -58,7 +51,7 @@ const Contact = () => {
     try {
       await sendContactForm(values)
       //Reset form value
-      setTouched({})
+      // setTouched({})
       setState(initState)
       toast({
         title: 'Message sent!.',
@@ -66,11 +59,11 @@ const Contact = () => {
         duration: 2000,
         position: 'top'
       })
-    } catch (error) {
+    } catch (error: unknown) {
       setState(prev => ({
         ...prev,
         isLoading: false,
-        error: error.message
+        error: error instanceof Error ? error.message : 'Unknow error.'
       }))
     }
   }
@@ -89,11 +82,7 @@ const Contact = () => {
           </Text>
         )}
 
-        <FormControl
-          isRequired
-          isInvalid={touched.company && !values.company}
-          my={2}
-        >
+        <FormControl isRequired isInvalid={!values.company} my={2}>
           <FormLabel>Company Name</FormLabel>
           <Input
             type="text"
@@ -101,16 +90,11 @@ const Contact = () => {
             errorBorderColor="red.300"
             value={values.company}
             onChange={handleChange}
-            onBlur={onBlur}
           />
           <FormErrorMessage>Required</FormErrorMessage>
         </FormControl>
 
-        <FormControl
-          isRequired
-          isInvalid={touched.email && !values.email}
-          my={2}
-        >
+        <FormControl isRequired isInvalid={!values.email} my={2}>
           <FormLabel>Email</FormLabel>
           <Input
             type="email"
@@ -118,16 +102,11 @@ const Contact = () => {
             errorBorderColor="red.300"
             value={values.email}
             onChange={handleChange}
-            onBlur={onBlur}
           />
           <FormErrorMessage>Required</FormErrorMessage>
         </FormControl>
 
-        <FormControl
-          isRequired
-          isInvalid={touched.subject && !values.subject}
-          my={2}
-        >
+        <FormControl isRequired isInvalid={!values.subject} my={2}>
           <FormLabel>Subject</FormLabel>
           <Input
             type="text"
@@ -135,25 +114,18 @@ const Contact = () => {
             errorBorderColor="red.300"
             value={values.subject}
             onChange={handleChange}
-            onBlur={onBlur}
           />
           <FormErrorMessage>Required</FormErrorMessage>
         </FormControl>
 
-        <FormControl
-          isRequired
-          isInvalid={touched.message && !values.message}
-          my={2}
-        >
+        <FormControl isRequired isInvalid={!values.message} my={2}>
           <FormLabel>Message</FormLabel>
           <Textarea
-            type="text"
             name="message"
             rows={4}
             errorBorderColor="red.300"
             value={values.message}
             onChange={handleChange}
-            onBlur={onBlur}
           />
           <FormErrorMessage>Required</FormErrorMessage>
         </FormControl>

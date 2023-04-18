@@ -65,13 +65,15 @@ const Page: NextPage<any> = ({}) => {
               problem-solving and troubleshooting along with ensuring compliance
               to high-quality standards.
             </Paragraph>
-            <Box align="center" my={4}>
-              <Link href="/works" passHref legacyBehavior>
-                <Button rightIcon={<ChevronRightIcon />} colorScheme="purple">
-                  My Portfolio
-                </Button>
-              </Link>
-            </Box>
+            <Center w={'full'} my={4}>
+              <Box>
+                <Link href="/works" passHref legacyBehavior>
+                  <Button rightIcon={<ChevronRightIcon />} colorScheme="purple">
+                    My Portfolio
+                  </Button>
+                </Link>
+              </Box>
+            </Center>
           </Section>
           <Section>
             <Experience />
