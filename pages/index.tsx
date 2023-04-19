@@ -36,10 +36,58 @@ import {
   SiGithub
 } from 'react-icons/si'
 import { FaJava } from 'react-icons/fa'
+import Head from 'next/head'
 
 const Page: NextPage<any> = ({}) => {
   return (
     <>
+      <Head>
+        <title>
+          Josue Alvarado | Front-end Developer | Software Developer{' '}
+        </title>
+        <meta
+          name="title"
+          content="Josue Alvarado | Front-End Developer| Software Enginner"
+        />
+        <meta
+          name="description"
+          content="Front-end Developer with 1+ years of experience in web and mobile application development, with expertise in web design (UI/UX) and databases SQL."
+        />
+        <meta
+          name="keywords"
+          content="Web Development, Software Development, Front-end Developer, Software Engineer, Front-end React Jr"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://dapier.dev/" />
+        <meta
+          property="og:title"
+          content="Josue Alvarado | Front-end Developer | Software Developer "
+        />
+
+        <meta
+          property="og:image"
+          content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
+        />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://dapier.dev/" />
+        <meta
+          property="twitter:title"
+          content="Josue Alvarado | Front-end Developer | Software Developer "
+        />
+        <meta
+          property="twitter:description"
+          content="Software engineer student with 1+ year experience in web and mobile development. "
+        />
+        <meta
+          property="twitter:image"
+          content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
+        />
+      </Head>
       <Layout>
         <Container maxW="1200px" mt={10}>
           <Hero />
