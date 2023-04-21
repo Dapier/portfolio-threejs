@@ -103,7 +103,7 @@ const Works = () => {
           <Section>
             <WorkGridItem
               id="clinic_app"
-              title={'Clinic App - Kotilin'}
+              title={'Clinic App (Kotlin)'}
               thumbnail={pocketClinic}
             >
               <HStack spacing={3} my={2}>
