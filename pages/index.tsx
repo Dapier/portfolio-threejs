@@ -42,52 +42,32 @@ const Page: NextPage<any> = ({}) => {
   return (
     <>
       <Head>
-        <title>
-          Josue Alvarado | Front-end Developer | Software Developer{' '}
-        </title>
-        <meta
-          name="title"
-          content="Josue Alvarado | Front-End Developer| Software Enginner"
-        />
-        <meta
-          name="description"
-          content="Front-end Developer with 1+ years of experience in web and mobile application development, with expertise in web design (UI/UX) and databases SQL."
-        />
-        <meta
-          name="keywords"
-          content="Web Development, Software Development, Front-end Developer, Software Engineer, Front-end React Jr"
-        />
+        <title>Josue Alvarado | Front-End Developer & Software Engineer</title>
+
+        <meta name="title" content="Josue Alvarado | Front-End Developer & Software Engineer" />
+        <meta name="description" content="Experienced Front-End Developer and UI/UX Designer. Built 5+ websites, worked at Schneider Electric and Tec de Monterrey. Available for freelance." />
+        <meta name="keywords" content="Front-End Developer, React Developer, Software Engineer, UI/UX Designer, Web Developer, JavaScript, Next.js, Freelance Developer" />
         <meta name="robots" content="index, follow" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="language" content="English" />
+        <meta name="language" content="en" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://dapier.dev/" />
 
+        {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://dapier.dev/" />
-        <meta
-          property="og:title"
-          content="Josue Alvarado | Front-end Developer | Software Developer "
-        />
+        <meta property="og:title" content="Josue Alvarado | Front-End Developer & Software Engineer" />
+        <meta property="og:description" content="I'm Josue Alvarado, a Front-End Developer with 3+ years of experience, 1 year in UI/UX design, and a Software Engineer. I've built 5+ websites, worked at Schneider Electric, and currently develop digital experiences at Tecnológico de Monterrey. Available for freelance work." />
+        <meta property="og:image" content="https://dapier.dev/images/og-image.jpg" />
 
-        <meta
-          property="og:image"
-          content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
-        />
-
+        {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://dapier.dev/" />
-        <meta
-          property="twitter:title"
-          content="Josue Alvarado | Front-end Developer | Software Developer "
-        />
-        <meta
-          property="twitter:description"
-          content="Software engineer student with 1+ year experience in web and mobile development. "
-        />
-        <meta
-          property="twitter:image"
-          content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
-        />
+        <meta property="twitter:title" content="Josue Alvarado | Front-End Developer & Software Engineer" />
+        <meta property="twitter:description" content="Front-End Developer with 3+ years of experience, UI/UX Designer, and Software Engineer. Built 5+ websites and open to freelance opportunities." />
+        <meta property="twitter:image" content="https://dapier.dev/images/og-image.jpg" />
       </Head>
+
       <Layout>
         <Container maxW="1200px" mt={10}>
           <Hero />
