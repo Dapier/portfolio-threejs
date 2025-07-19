@@ -66,6 +66,9 @@ const Page: NextPage<any> = ({}) => {
         <meta property="twitter:title" content="Josue Alvarado | Front-End Developer & Software Engineer" />
         <meta property="twitter:description" content="Front-End Developer with 3+ years of experience, UI/UX Designer, and Software Engineer. Built 5+ websites and open to freelance opportunities." />
         <meta property="twitter:image" content="https://dapier.dev/images/og-image.jpg" />
+
+        
+
       </Head>
 
       <Layout>

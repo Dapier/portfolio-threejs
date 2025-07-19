@@ -44,10 +44,13 @@ export default class Document extends NextDocument {
           <link rel="icon" href="https://www.dapier.dev/public/favicon.ico" />
         </Head>
         <body>
-          {/* <!-- Google Tag Manager (noscript) --> */}
-          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2WXGLN9"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-          {/* <!-- End Google Tag Manager (noscript) --> */}
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-K2WXGLN9"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+
 
           <ColorModeScript initialColorMode={theme.config} />
           <Main />
